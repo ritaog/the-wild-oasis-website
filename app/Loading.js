@@ -1,5 +1,7 @@
+import Spinner from "@/app/_components/Spinner";
+
 const Loading = () => {
-  return <p style={{ backgroundColor: red }}>loading data...</p>;
+  return <Spinner />;
 };
 
 export default Loading;
