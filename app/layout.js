@@ -5,12 +5,12 @@ import "@/app/_styles/globals.css";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
-  display: "swap", // use default font before josefin is downlaoded, and then swap once josfin is ready.
+  display: "swap", // use default font before josefin is downlaoded, and then swap once josefin is ready.
 });
 
 export const metadata = {
   title: {
-    template: "%s - The Wild Oasis",
+    template: "%s | The Wild Oasis",
     default: "Welcome | The Wild Oasis",
   },
   description:

@@ -2,6 +2,18 @@ import Image from "next/image";
 import { getCabin } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 
+
+export async function generateMetadata({ params }) {
+  const cabin = await getCabin(params.cabinId);
+
+  const {name, maxCapacity} = cabin;
+
+  return {
+    title: `Cabin ${name}`,
+    description: `Book your stay at cabin ${name} in the heart of the Dolomites! Perfect for up to ${maxCapacity} guests. Privacy guaranteed. Reserve today, pay on arrival!`,
+  };
+}
+
 export default async function Page({ params }) {
   const cabin = await getCabin(params.cabinId);
 
