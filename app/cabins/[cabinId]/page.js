@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getCabin } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 
@@ -11,7 +12,12 @@ export default async function Page({ params }) {
     <div className="mx-auto mt-8 max-w-6xl">
       <div className="mb-24 grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 px-10 py-3">
         <div className="relative -translate-x-3 scale-[1.15]">
-          <img src={image} alt={`Cabin ${name}`} />
+          <Image
+            src={image}
+            fill
+            className="object-cover"
+            alt={`Cabin ${name}`}
+          />
         </div>
 
         <div>
